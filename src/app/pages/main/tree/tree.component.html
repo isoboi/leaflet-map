@@ -1,0 +1,26 @@
+<div class="left-block">
+  <h3 class="title">Tree</h3>
+
+  <div class="content">
+    <ul>
+      <li *ngFor="let tree of trees"
+          (click)="onTreeClick($event, tree)">
+        {{tree.label}}
+        <ul>
+          <li *ngFor="let subTree of tree.value"
+              (click)="onTreeClick($event, subTree)">
+            {{subTree.label}}
+            <ul>
+              <li class="coordinates"
+                  *ngFor="let subSubTree of subTree.value"
+                  (click)="onTreeClick($event, subSubTree)"
+                  [class.selected]="subSubTree.selected">
+                {{subSubTree.label}}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

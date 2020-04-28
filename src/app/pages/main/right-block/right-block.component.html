@@ -1,0 +1,12 @@
+<div class="right-block">
+  <h3 class="title">Coordinates</h3>
+
+  <div class="content">
+    <ul>
+      <li *ngFor="let coordinate of coordinates; let i = index">
+        {{coordinate.lat}} - {{coordinate.lng}}
+        <span class="remove-icon" (click)="deleteCoordinate(coordinate, i)">X</span>
+      </li>
+    </ul>
+  </div>
+</div>

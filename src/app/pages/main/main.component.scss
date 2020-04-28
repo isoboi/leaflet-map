@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  height: 100%;
+
+  .left-block {
+    flex: 1;
+  }
+
+  .map {
+    flex: 5;
+  }
+
+  .right-block {
+    flex: 1;
+  }
+}
